@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(16, 5, 38);
+  background-color: lightgray;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.text-holder {
+  margin: 10px 0px;
+  font-size: 32px;
+}
+
+.gameboard {
+  background-color: white;
+  width: 450px;
+  height: 450px;
+  line-height: 0px;  /* this is so the cell does'nt expand when it has text inside */ 
+
+  visibility: hidden;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 2px solid;
+}
+
+.cell {
+  font-size: 7em;
+  outline: 1px solid;
+  text-align: center;
+  align-content: center;
+  outline: 1px solid black; 
+  cursor: pointer;
+}
+
+.X {
+  color: red;
+  cursor:default;
+}
+
+.O {
+  color: blue;
+  cursor:default;
+}
+
+#restart {
+  margin-top: 15px;
+  font-size: 32px;
+  padding: 5px 13px;
+  border: none;
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+dialog {
+  position: absolute; 
+  top: 50%; 
+  transform: translateY(-50%);
+  margin: 0px auto;
+
+  width: 700px;
+  height: 90%;
+  justify-items: center;
+  align-content: center;
+  text-align: center;
+  font-size: 1.7em;
+  border: none;
+  border-radius: 40px;
+  box-shadow: 0px 0px 10px 5px gray;
+}
+
+.inputs {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 40px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+label[for="player1"] {
+  color: red;
+}
+
+label[for="player2"] {
+  color: blue;
+}
+
+input {
+  font-size: 22px;
+  text-align: center;
+  padding: 5px 3px;
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid gray;
+  transition-duration: 0.3s;
+}
+
+input:hover {
+  border: 1px solid rgb(0, 207, 207);
+  box-shadow: 0 7px 2px -2px rgb(243, 255, 251);
+}
+
+#playBtn {
+  padding: 9px 35px;
+  font-size: 32px;
+  border: none;
+  border-radius: 90px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: lawngreen;
+  color: white;
+}
+
+#playBtn:active {
+  background-color: green;
+}
